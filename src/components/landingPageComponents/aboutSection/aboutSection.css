@@ -1,0 +1,163 @@
+.aboutSectWrapper {
+    width: 75%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding-top: 7rem;
+    gap: 3.5rem;
+    align-self: center;
+}
+
+.badgeWrapper {
+    border-radius: 15px;
+    background-color: #1c1f3b;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    min-height: 16rem;
+    align-self: center;
+    padding: 2rem;
+    gap: 4rem;
+}
+
+.badgeWrapper .header {
+    color: white;
+    font-size: 3rem;
+    line-height: 100%;
+    font-weight: bold;
+}
+
+.badgeWrapper .description {
+    font-size: 1.6rem;
+    color: rgb(215, 215, 215);
+    position: relative;
+}
+
+.cursorWrapper {
+    position: absolute;
+    bottom: -15%;
+    right: 20%;
+}
+
+.aboutSubSection {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.subHeader {
+    font-size: 2.8rem;
+    font-weight: bold;
+}
+
+.subDescription {
+    font-size: 1.7rem;
+    font-weight: 400;
+    color: rgb(85, 85, 85);
+}
+
+.previewMockup {
+    width: 100%;
+    height: max-content;
+    border-radius: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+    transition: all 0.2s ease-in;
+    margin-top: 2rem;
+
+    -webkit-box-shadow: 1px -1px 26px 7px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 1px -1px 26px 7px rgba(0, 0, 0, 0.2);
+    box-shadow: 1px -1px 26px 7px rgba(0, 0, 0, 0.2);
+}
+
+.previewMockup:hover {
+    transform: scale(1.02);
+
+
+    -webkit-box-shadow: 1px -1px 26px 11px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 1px -1px 26px 11px rgba(0, 0, 0, 0.2);
+    box-shadow: 1px -1px 26px 11px rgba(0, 0, 0, 0.2);
+}
+
+.appPreview {
+    width: 100%;
+    height: max-content;
+}
+
+.extrafeatures_wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 1.5rem;
+    row-gap: 1.5rem;
+    width: 100%;
+    height: max-content;
+}
+
+
+
+
+/* Tab */
+@media (max-width: 992px) {
+    .extrafeatures_wrapper {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+
+/* Mobile */
+@media (max-width: 575px) {
+    
+    .aboutSectWrapper {
+        width: 90%;
+    }
+
+    .badgeWrapper {
+        padding: 1rem;
+        gap: 2rem;
+        min-height: max-content;
+    }
+
+    .badgeWrapper .header {
+        font-size: 6vw;
+    }
+
+    .badgeWrapper .description {
+        font-size: 1rem;
+    }
+
+    .cursorWrapper {
+        display: none;
+    }
+
+
+    .aboutSubSection {
+        gap: 1.5rem;
+    }
+
+    .subHeader {
+        font-size: 7.5vw;
+        text-align: center;
+        width: 100%;
+        /* border: 1px solid black; */
+    }
+
+    .subDescription {
+        font-size: 5vw;
+        text-align: center;
+        width: 100%;
+        font-weight: 400;
+        color: rgb(85, 85, 85);
+    }
+
+
+    .extrafeatures_wrapper {
+        grid-template-columns: 1fr;
+    }
+
+}
+

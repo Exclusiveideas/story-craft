@@ -1,0 +1,64 @@
+.ctaBanner {
+    width: 100%;
+    background-color: #1C1F3B;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+    height: 40vh;
+    color: #fff;
+    margin-bottom: 3rem;
+}
+
+.bannerHeader {
+    font-size: 3.2rem;
+    font-weight: bold;
+    max-width: 90%;
+}
+
+.bannerDesc {
+    font-size: 1.3rem;
+    color: rgb(215, 215, 215);
+    max-width: 90%;
+}
+
+.bannerBtn {
+    width: max-content;
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    background-color: white;
+    color: black;
+    margin-top: 2rem;
+}
+
+/* Tab */
+@media (max-width: 992px) {
+    .inquiryForm_wrapper {
+        width: 55%;
+    }
+}
+
+
+
+
+/* Mobile */
+@media (max-width: 575px) {
+    .bannerHeader {
+        font-size: 6vw;
+        font-weight: bold;
+    }
+
+    .bannerDesc {
+        font-size: 3.8vw;
+        color: rgb(215, 215, 215);
+        text-align: center;
+    }
+
+    .bannerBtn {
+        font-size: 4vw;
+        margin-top: 2rem;
+    }
+
+}

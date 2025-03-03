@@ -1,0 +1,54 @@
+.inquiryForm_wrapper {
+    width: 35%;
+    height: max-content;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-self: center;
+    padding-top: 7rem;
+    padding-bottom: 4rem;
+    color: #333;
+}
+
+.inquiryHeader {
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.inquirySubHeader {
+    font-size: 1.1rem;
+}
+
+.btn {
+    background-color: #1C1F3B;
+}
+
+/* Tab */
+@media (max-width: 992px) {
+    .inquiryForm_wrapper {
+        width: 55%;
+    }
+}
+
+
+
+
+/* Mobile */
+@media (max-width: 575px) {
+    .inquiryForm_wrapper {
+        min-width: 85%;
+    }
+
+    .inquiryHeader {
+        font-size: 6.8vw;
+        width: 100%;
+        text-align: center;
+    }
+
+    .inquirySubHeader {
+        font-size: 4vw;
+        width: 100%;
+        text-align: center;
+    }
+}

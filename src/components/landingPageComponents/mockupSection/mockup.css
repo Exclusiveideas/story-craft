@@ -1,0 +1,90 @@
+.mockupWrapper {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #D1D1F7;
+    padding: 3rem;
+    box-sizing: border-box;
+}
+
+.title {
+    font-size: 4rem;
+    text-transform: uppercase;
+}
+
+.innerWrapper {
+    width: 70vw;
+    height: max-content;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+
+.mockupImg {
+    width: 40%;
+    height: max-content;
+}
+
+
+
+
+/* Tab */
+@media (max-width: 992px) {
+    .mockupWrapper {
+        flex-direction: column;
+        padding: 3rem 2rem;
+        gap: 2rem;
+        height: max-content;
+    }
+    
+    .title {
+        font-size: 9vw;
+    }
+
+    
+    .innerWrapper {
+        width: 100%;
+        gap: 1.5rem;
+    }
+    
+
+.mockupImg {
+    width: 45%;
+    height: max-content;
+}
+
+}
+
+/* Mobile */
+@media (max-width: 575px) {
+    .mockupWrapper {
+        flex-direction: column;
+        padding: 2rem 1rem;
+        gap: 2rem;
+        height: max-content;
+    }
+    
+    .title {
+        font-size: 11vw;
+    }
+    
+    .innerWrapper {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+
+.mockupImg {
+    width: 80%;
+}
+
+
+
+}

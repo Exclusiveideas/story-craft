@@ -1,0 +1,21 @@
+
+.questionContainer {
+    width: 70%;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+}
+
+.triggerTxt {
+    font-size: 16px;
+}
+
+
+
+
+
+/* Mobile */
+@media (max-width: 575px) {
+    
+.questionContainer {
+    width: 90%;
+}
+}
