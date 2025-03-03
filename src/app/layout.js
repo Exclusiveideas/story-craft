@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono, Poppins, Blinker } from "next/font/google";
 import "./globals.css";
 import Head from "next/head";
+import { Toaster } from "sonner";
 
 // If loading a variable font, you don't need to specify the font weight
 const blinker = Blinker({
@@ -28,8 +29,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "FrameFlow",
-  description: "An Editor's Co-Pilot",
+  title: "StoryCraft",
+  description: "A Writer's Co-Pilot",
 };
 
 export default function RootLayout({ children }) {
@@ -57,6 +58,7 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} ${poppins.variable} ${blinker.variable}`}
       >
         {children}
+        <Toaster />
       </body>
     </html>
   );

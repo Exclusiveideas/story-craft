@@ -3,10 +3,18 @@
 @tailwind utilities;
 
 
-
 :root {
-  --brand-color: #342DF2;
+  --dashboard-bg: #2a2c41;
+  
+  --color-dark-gray: #1f2937; /* Tailwind gray-800 */
+  --color-text-dark: #111827; /* Tailwind gray-900 */
+  
+  --page-bg: #1A1A1A;
+  --page-bg-darker: #111111;
+  --btn-color: #78B29C;
+  --btn-color-red: #EC5E95;
 }
+
 
 html,
 body {
@@ -86,5 +94,16 @@ a {
     --chart-3: 30 80% 55%;
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
+  }
+}
+
+
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
   }
 }
