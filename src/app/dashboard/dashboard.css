@@ -1,0 +1,30 @@
+.dashboard_wrapper {
+    width: 100vw;
+    min-height: 100vh;
+    box-sizing: border-box;
+    overflow-y: auto;
+    display: flex;
+    position: relative;
+}
+
+.page_content {
+    width: 100%;
+    min-height: 100vh;
+    /* background-color: var(--page-bg); */
+    /* color: white; */
+}
+
+.pageTop {
+    height: max-content;
+    width: 100%;
+    padding: .5rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.sideBar_trigger {
+    cursor: pointer;
+    width: fit-content;
+}

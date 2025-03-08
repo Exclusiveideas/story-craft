@@ -1,0 +1,71 @@
+.sidebar {
+    color: black;
+    background: var(--sidebar-bg-color);;
+}
+
+.sideBarItem svg{
+    color: black;
+}
+.sideBarItem span {
+    color: black;
+}
+
+.userInfo_box {
+    padding: 1rem 0;
+    height: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: .7rem;
+    font-size: 13.5px;
+}
+
+.userLetter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 18px;
+    padding: .7rem;
+    border-radius: 50%;
+    background-color: var(--blue-color);
+}
+
+.user_name {
+    color: black;
+}
+
+.user_email {
+    color: gray;
+    font-size: 12px;
+}
+
+.sidebar_menu {
+    padding: 1.5rem .5rem;
+    gap: .7rem;
+}
+
+.logOutBar {
+    color: black;
+    /* border: 1px solid var(--blue-color); */
+}
+
+.logOutBar:hover {
+    color: black;
+}
+
+.createNewProject {
+    color: white;
+    width: 100%;
+    padding: .5rem 0;
+    padding-left: .5rem;
+    background-color: var(--blue-color);
+    border-radius: 0 10px 10px 0;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+}
+
+.createNewProject:hover {
+    background-color: var(--blue-hover-color);
+}
