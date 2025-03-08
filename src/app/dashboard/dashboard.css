@@ -1,6 +1,6 @@
 .dashboard_wrapper {
     width: 100vw;
-    min-height: 100vh;
+    height: 100vh;
     box-sizing: border-box;
     overflow-y: auto;
     display: flex;
@@ -15,16 +15,112 @@
 }
 
 .pageTop {
-    height: max-content;
+    height: 10%;
+    /* border: 1px solid black; */
     width: 100%;
-    padding: .5rem 1rem;
+    padding: 0 1rem;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    /* justify-content: space-between; */
 }
 
 
 .sideBar_trigger {
     cursor: pointer;
     width: fit-content;
+}
+
+
+.projectSearchContainer {
+    border: 1px solid rgb(136, 136, 136);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: auto;
+    width: 50%;
+    padding: .5rem 1rem;
+    border-radius: 18px;
+    font-size: 14px;
+    gap: .7rem;
+}
+
+.searchInput {
+    width: 100%;
+    outline: none;
+}
+
+.searchIcon {
+    color: rgb(74, 74, 74);
+    cursor: pointer;
+}
+
+
+.dashboard_content {
+    /* border: 1px solid black; */
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 2rem;
+    padding-left: 4rem;
+    box-sizing: border-box;
+}
+
+
+.contentHeader h1 {
+    font-size: 50px;
+    font-weight: 500;
+}
+ 
+.contentHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+} 
+
+.createNewProjectBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    border-radius: 18px;
+    padding: .5rem 1rem;
+    background-color: var(--blue-color);
+    transition: all 0.2s ease-in;
+    color: white;
+    margin-right: 1rem;
+    cursor: pointer;
+}
+
+.createNewProjectBtn:hover {
+    background-color: var(--blue-hover-color);
+}
+
+
+.projects_wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+    box-sizing: border-box;
+    padding: 1rem;
+    padding-left: 0;
+}
+
+.noProjectsWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    font-size: 80px;
+    color: gray;
+    gap: .8rem;
+}
+
+.noProjectsWrapper svg {
+    transform: scale(3.5);
+}
+
+.noProjectsWrapper p {
+    font-weight: 500;
 }
