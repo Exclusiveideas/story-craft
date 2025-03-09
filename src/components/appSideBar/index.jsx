@@ -17,6 +17,7 @@ import "./appSideBar.css";
 import useAuthStore from "@/store/authStore";
 import { useRouter } from "next/navigation";
 import { logOutUser } from "@/apiCalls/authAPI";
+import useDialogStore from "@/store/useDialogStore";
 
 // Menu items.
 const navHeader = [
@@ -48,6 +49,8 @@ const navProjects = [
 export function AppSidebar() {
   const updateUser = useAuthStore((state) => state.updateUser);
   const router = useRouter();
+
+  const { openDialog } = useDialogStore();
 
   const logOut = () => {
     updateUser(null);
@@ -96,7 +99,7 @@ export function AppSidebar() {
       </SidebarContent>
       <SidebarFooter>
         <SidebarMenu>
-          <div className="createNewProject">
+          <div onClick={openDialog} className="createNewProject">
             <p>Create new project</p>
           </div>
           <SidebarMenuItem onClick={logOut}>
