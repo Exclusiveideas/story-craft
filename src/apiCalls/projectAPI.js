@@ -17,3 +17,29 @@ export const createProject = async (projectDetails) => {
     };
   }
 };
+
+export const fetchProject = async (projectID) => {
+    
+  try {
+    const response = await API.get(`/project/${projectID}`);
+
+    return { project: response.data };
+  } catch (err) {
+    return {
+      error: err?.response?.data?.error || err?.message || "Problem fetching project - Try again.",
+    };
+  }
+};
+
+export const researchProject = async (projectID) => {
+    
+  try {
+    const response = await API.post(`/sectionResearch/${projectID}`);
+
+    return { project: response.data };
+  } catch (err) {
+    return {
+      error: err?.response?.data?.error || err?.message || "Problem fetching project - Try again.",
+    };
+  }
+};

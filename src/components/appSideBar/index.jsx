@@ -31,17 +31,17 @@ const navHeader = [
 const navProjects = [
   {
     title: "Project One",
-    url: "/project/project-id",
+    url: "/project/5b3f59b3-b437-492a-a9b8-6b25ff3f1034",
     icon: Kanban,
   },
   {
     title: "Project Two",
-    url: "/project/project-id",
+    url: "/project/5b3f59b3-b437-492a-a9b8-6b25ff3f1034",
     icon: Kanban,
   },
   {
     title: "Project Three",
-    url: "/project/project-id",
+    url: "/project/5b3f59b3-b437-492a-a9b8-6b25ff3f1034",
     icon: Kanban,
   },
 ];

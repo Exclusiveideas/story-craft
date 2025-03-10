@@ -208,7 +208,6 @@ export default function NewProjectDialog() {
 
         updateIsLoading(false);
         closeProjectDialog();
-        console.log("newProject: ", newProject?.project);
         router.push(`/project/${newProject?.project?.id}`);
       }
     }

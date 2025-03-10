@@ -29,20 +29,21 @@
 .dp_infoContainer {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     height: 40%;
     padding: .5rem;
     gap: .5rem;
 }
 
 .projectName {
-    font-size: 19px;
+    font-size: 17px;
     max-width: 90%;
     line-height: 100%;
     font-weight: 600;
 }
 
 .dp_description, .dp_tags {
-    font-size: 14px;
+    font-size: 12px;
 }
 
 .dp_description span {
