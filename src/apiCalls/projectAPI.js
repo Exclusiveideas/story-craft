@@ -5,36 +5,26 @@ const API = axios.create({
   withCredentials: true, // 🔥 Ensures cookies are sent & received
 });
 
-export const createProject = async (projectDetails) => {
-    
-  try {
-    const response = await API.post(`/project/`, projectDetails);
 
-    return { project: response.data?.project };
-  } catch (err) {
-    return {
-      error: err?.response?.data?.error || err?.message || "Problem creating project - Try again.",
-    };
+export async function createProject(projectData, cancelToken) {
+  try {
+    const response = await API.post("/project", projectData, { cancelToken });
+    return { project: response.data };
+  } catch (error) {
+    if (axios.isCancel(error)) {
+      // console.log("Request canceled:", error.message);
+      return { error: "Request was canceled" };
+    }
+    return { error: "Failed to create project" };
   }
-};
+}
+
+
 
 export const fetchProject = async (projectID) => {
     
   try {
-    const response = await API.get(`/project/${projectID}`);
-
-    return { project: response.data };
-  } catch (err) {
-    return {
-      error: err?.response?.data?.error || err?.message || "Problem fetching project - Try again.",
-    };
-  }
-};
-
-export const researchProject = async (projectID) => {
-    
-  try {
-    const response = await API.post(`/sectionResearch/${projectID}`);
+    const response = await API.get(`/project/one/${projectID}`);
 
     return { project: response.data };
   } catch (err) {

@@ -10,7 +10,7 @@ export default function ProjectLoadingDialog({ title, content, loading }) {
 
   return (
     <Dialog open={loadingDialogOpen}>
-      <DialogContent className="flex flex-col sm:max-w-[500px]">
+      <DialogContent className="[&>button]:hidden flex flex-col sm:max-w-[500px]">
         <DialogHeader>
           <DialogTitle>
             <div className="dialogTitle">

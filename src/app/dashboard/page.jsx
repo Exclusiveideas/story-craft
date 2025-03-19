@@ -17,7 +17,7 @@ const projects = [
       "Lorem ipsum dolor sit amet consectetur adipisicingswwe ww wef wfw f w ewf",
     style: "Listicle format",
     tags: ["one", "two", "three", "mufu"],
-    uuid: "123456789",
+    uuid: "5b3f59b3-b437-492a-a9b8-6b25ff3f1034",
   },
   {
     title: "How to be a superhero in 12 seconds",
@@ -25,7 +25,7 @@ const projects = [
       "Lorem ipsum dolor sit amet consectetur adipisicingswwe ww wef wfw f w ewf",
     style: "Listicle format",
     tags: ["one", "two", "three"],
-    uuid: "123456789",
+    uuid: "5df5d667-9530-46c9-abd8-0ae947106877",
   },
   {
     title: "How to be a superhero in 12 seconds",
@@ -33,7 +33,7 @@ const projects = [
       "Lorem ipsum dolor sit amet consectetur adipisicingswwe ww wef wfw f w ewf",
     style: "Listicle format",
     tags: ["one", "two", "three"],
-    uuid: "123456789",
+    uuid: "5b3f59b3-b437-492a-a9b8-6b25ff3f1034",
   },
   {
     title: "How to be a superhero in 12 seconds",
@@ -41,7 +41,7 @@ const projects = [
       "Lorem ipsum dolor sit amet consectetur adipisicingswwe ww wef wfw f w ewf",
     style: "Listicle format",
     tags: ["one", "two", "three"],
-    uuid: "123456789",
+    uuid: "5b3f59b3-b437-492a-a9b8-6b25ff3f1034",
   },
   {
     title: "How to be a superhero in 12 seconds",
@@ -49,7 +49,7 @@ const projects = [
       "Lorem ipsum dolor sit amet consectetur adipisicingswwe ww wef wfw f w ewf",
     style: "Listicle format",
     tags: ["one", "two", "three"],
-    uuid: "123456789",
+    uuid: "5b3f59b3-b437-492a-a9b8-6b25ff3f1034",
   },
   {
     title: "How to be a superhero in 12 seconds",
@@ -57,7 +57,7 @@ const projects = [
       "Lorem ipsum dolor sit amet consectetur adipisicingswwe ww wef wfw f w ewf",
     style: "Listicle format",
     tags: ["one", "two", "three"],
-    uuid: "123456789",
+    uuid: "5b3f59b3-b437-492a-a9b8-6b25ff3f1034",
   },
   {
     title: "How to be a superhero in 12 seconds",
@@ -65,7 +65,7 @@ const projects = [
       "Lorem ipsum dolor sit amet consectetur adipisicingswwe ww wef wfw f w ewf",
     style: "Listicle format",
     tags: ["one", "two", "three"],
-    uuid: "123456789",
+    uuid: "5b3f59b3-b437-492a-a9b8-6b25ff3f1034",
   },
   {
     title: "How to be a superhero in 12 seconds",
@@ -73,7 +73,7 @@ const projects = [
       "Lorem ipsum dolor sit amet consectetur adipisicingswwe ww wef wfw f w ewf",
     style: "Listicle format",
     tags: ["one", "two", "three"],
-    uuid: "123456789",
+    uuid: "5b3f59b3-b437-492a-a9b8-6b25ff3f1034",
   },
   {
     title: "How to be a superhero in 12 seconds",
@@ -81,7 +81,7 @@ const projects = [
       "Lorem ipsum dolor sit amet consectetur adipisicingswwe ww wef wfw f w ewf",
     style: "Listicle format",
     tags: ["one", "two", "three"],
-    uuid: "123456789",
+    uuid: "5b3f59b3-b437-492a-a9b8-6b25ff3f1034",
   },
 ];
 

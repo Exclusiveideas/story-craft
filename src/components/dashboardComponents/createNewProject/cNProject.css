@@ -1,0 +1,3 @@
+.no-close-button button[data-state="open"] {
+    display: none !important;
+  }

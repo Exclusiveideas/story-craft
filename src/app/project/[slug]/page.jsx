@@ -6,18 +6,19 @@ import { toast } from "sonner";
 import { fetchProject } from "@/apiCalls/projectAPI";
 import useProjectPageStore from "@/store/useProjectPageStore";
 import { usePathname } from "next/navigation";
+import { createProjectResearch, fetchProjectResearch } from "@/lib/utils";
 
 export default function Page() {
   const pathname = usePathname(); // Get the current URL path
   const segments = pathname.split("/"); // Split the path into parts
   const projectId = segments[segments.length - 1]; // Get the last segment (projectId)
 
-  const [project, setProject] = useState(null);
+  
   const [loading, setLoading] = useState(true);
   const [loadingDialogTitle, setLoadingDialogTitle] = useState("Fetching Project");
   const [loadingDialogContent, setLoadingDialogContent] = useState("processing...");
   
-  const { openloadingDialog, activeProject, updateActiveProject } = useProjectPageStore();
+  const { openloadingDialog, activeProjectResearches, updateActiveProject, updateActiveProjectResearches } = useProjectPageStore();
 
   useEffect(() => {
     openloadingDialog()
@@ -38,45 +39,43 @@ export default function Page() {
       setLoading(false);
       return;
     }
+
     const response = await fetchProject(projectId);
 
     if (response?.error) {
       setTimeout(() => {
-        toast.error("Error fetching project.", {
+        toast.error("Error fetching project", {
           description: response?.error,
           style: { color: "red" },
         });
       }, 100);
 
+        
+        setTimeout(() => {
+          toast.info("Reload Page", {
+          style: { color: "blue" },
+        })
+        }, 3000);
+    
       setLoadingDialogContent("An error occurred.");
+      setLoading(false);
     } else {
-      updateActiveProject(response?.project)
+      updateActiveProject(response?.project);
+      
+      setLoadingDialogTitle(response?.project?.projectName)
+      if(response?.project?.processed) {
+        fetchProjectResearch(projectId, updateActiveProjectResearches)
+      } else {
+        createProjectResearch(projectId, updateActiveProjectResearches, setLoadingDialogContent)
+      }
     }
+    
   };
+
   
   useEffect(() => {
-    if(!activeProject) {
-      return
-    }
-    if(!activeProject?.processed) {
-      processActiveProject()
-    } else {
-      displayProject();
-    }
-  }, [activeProject]);
-
-  const processActiveProject = () => {
-    setLoadingDialogTitle(`Processing ${activeProject?.projectName}`)
-    setLoadingDialogContent("Researching script")
-    // setLoadingDialogContent("Structuring script")
-    // setLoadingDialogContent("Linking structure and research")
-    // setLoadingDialogContent("Loading project view")
-  }
-
-  const displayProject = () => {
-    setLoadingDialogTitle(activeProject?.projectName)
-    setLoadingDialogContent("Loading project view")
-  }
+    // load project view
+  }, [activeProjectResearches]);
 
   return (
     <div className="projectPage_wrapper">
