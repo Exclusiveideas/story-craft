@@ -6,17 +6,17 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import {
-    Popover,
-    PopoverContent,
-    PopoverTrigger,
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
 } from "@/components/ui/popover";
 import {
-    Command,
-    CommandEmpty,
-    CommandGroup,
-    CommandInput,
-    CommandItem,
-    CommandList,
+  Command,
+  CommandEmpty,
+  CommandGroup,
+  CommandInput,
+  CommandItem,
+  CommandList,
 } from "@/components/ui/command";
 import { storytellingStructures, storytellingStyles } from "@/lib/constants";
 
@@ -143,7 +143,7 @@ export function ProjectForm({
           id="description"
           onChange={(e) => setField("description", e.target.value)}
           className="col-span-3"
-          placeholder="Briefly describe the script..."
+          placeholder="Describe your video idea, audience, tone, and limitations (like max no. of chapters)"
         />
       </div>
     </div>

@@ -5,6 +5,11 @@
     
 }
 
+.project-view {
+    height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
+  }
 
 .custom-node {
     background: white;
@@ -14,7 +19,31 @@
     flex-direction: column;
     padding: 1rem;
     border-radius: 15px;
+    gap: .5rem;
 }
+
+.section-node {
+    border: 2px solid var(--anakiwa);
+    border-radius: 12px;
+    background-color: var(--anakiwa-light-bg);
+}
+
+.research-node {
+    width: max-content;
+    gap: 16px;
+    border: 2px solid var(--azure-radiance);
+    border-radius: 12px;
+    background-color: var(--azure-radiance-light-bg);
+}
+
+.research-info-node {
+    width: max-content;
+    gap: 16px;
+    border: 2px solid var(--biscay);
+    border-radius: 12px;
+    background-color: var(--biscay-lighter-bg);
+}
+
 
 .node-content {
     display: flex;
@@ -36,6 +65,23 @@
     gap: .5rem;
 }
 
+.node-row.section {
+    color: #3C424D;
+}
+
+.node-row.research .rowTitle {
+    color: #c28567;
+}
+
+.node-row.researchInfo .rowTitle {
+    color: #172e57;
+}
+
+.rowTitle > p {
+    width: max-content;
+    font-weight: 700;
+}
+
 .help-icon{
     width: 12px;
     height: 12px;
@@ -48,6 +94,27 @@
     padding: .6rem;
     font-size: 13px;
     border-radius: 12px;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+}
+
+
+.node-row.section > .rowInfo {
+    background-color: var(--anakiwa-light-bg);
+    color: var(--fog);
+    font-weight: 500;
+}
+
+.node-row.research > .rowInfo {
+    background-color: var(--dodger-light-bg);
+    color: #6b7280;
+    font-weight: 500;
+}
+
+.node-row.researchInfo > .rowInfo {
+    background-color: var(--biscay-light);
+    color: var(--biscay);
+    font-weight: 500;
 }
 
 
@@ -63,4 +130,44 @@
     display: inline-block;
     justify-content: center;
     font-size: 12px;
+}
+
+
+/* Add this to your CSS */
+.collapse-btn {
+    background: none;
+    border: none;
+    color: blue;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  
+  .collapse-btn:hover {
+    text-decoration: underline;
+  }
+  
+
+  .collapse_expand {
+    font-size: 10px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: #3C424D;
+  }
+
+  .collapse_expand > .toggleTxt {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+
+.nodeLink {
+    cursor: pointer;
+
+}
+
+.nodeLink:hover {
+    text-decoration: underline;
 }

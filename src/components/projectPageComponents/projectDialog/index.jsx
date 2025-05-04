@@ -6,7 +6,7 @@ import useProjectPageStore from "@/store/useProjectPageStore";
 import { CircularProgress } from "@mui/material";
 
 export default function ProjectLoadingDialog({ title, content, loading }) {
-  const { loadingDialogOpen, closeloadingDialog } = useProjectPageStore();
+  const { loadingDialogOpen } = useProjectPageStore();
 
   return (
     <Dialog open={loadingDialogOpen}>
