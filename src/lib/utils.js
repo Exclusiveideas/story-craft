@@ -73,3 +73,11 @@ export async function createProjectResearch(
     setLoadingDialogContent("An error occurred.");
   }
 }
+
+
+
+export function limitTo50Words(text) {
+  const words = text.trim().split(/\s+/);
+  if (words.length <= 50) return text;
+  return words.slice(0, 50).join(" ") + " ...";
+}

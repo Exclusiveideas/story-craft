@@ -7,4 +7,27 @@
     align-items: center;
     justify-content: center;
     position: relative;
+    font-family: 'SF Pro', 'Blinker', 'Poppins', Arial, Helvetica, sans-serif;
+}
+
+.projectTitleContainer {
+    width: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 999;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 1rem 2rem;
+    border: 1px solid var(--fog);
+    color: var(--fog);
+    border-radius: 12px;
+    background-color: var(--fog-light-bg);
+}
+
+.projectTitleContainer > p {
+    font-size: 28px;
+    font-weight: 600;
 }

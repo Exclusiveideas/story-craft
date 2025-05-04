@@ -3,6 +3,14 @@
 @tailwind utilities;
 
 
+@font-face {
+  font-family: 'SF Pro';
+  src: url('/fonts/SF-Pro.ttf') format('truetype');
+  font-weight: 100 900; /* Support ultra-thin to black */
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --dashboard-bg: #2a2c41;
   
@@ -17,6 +25,22 @@
   --blue-color: #615DF5;
   --blue-hover-color: #413cc7;
   --sidebar-bg-color: #ededed;
+
+
+
+
+  --fog: #2873a5;
+  --fog-light-bg: rgba(74, 144, 191, 0.1);
+  --anakiwa: #6cc3e5;
+  --anakiwa-light-bg: rgba(108, 195, 229, 0.1);
+  --malibu: #a2e0f6;
+  --dodger: #f0b6a3;
+  --dodger-light-bg: rgba(240, 182, 163, 0.15);
+  --azure-radiance: #f3a781;
+  --azure-radiance-light-bg: rgba(243, 167, 129, 0.1);
+  --biscay: #1d3a6d;
+  --biscay-lighter-bg: rgba(29, 58, 109, 0.1);
+  --biscay-light: rgba(29, 58, 109, 0.1);
 }
 
 
@@ -24,7 +48,7 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
-  font-family: 'Blinker', 'Poppins', Arial, Helvetica, sans-serif;
+  font-family: 'Blinker', 'Poppins', 'SF Pro', Arial, Helvetica, sans-serif;
   scroll-behavior: smooth;
 }
 

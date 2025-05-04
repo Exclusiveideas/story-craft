@@ -1,0 +1,10 @@
+.processToastWrapper {
+    background-color: #fff;
+}
+
+.processToastItem {
+    border: 1px solid var(--fog);
+    color: var(--fog);
+    font-weight: 500;
+    background-color: var(--fog-light-bg);
+}

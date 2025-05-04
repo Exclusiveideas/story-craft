@@ -38,7 +38,7 @@
     color: black;
     font-size: 14px;
     outline: none;
-    background-color: var(--btn-color);
+    background-color: #4AA0C4;
 }
 
 .textError {
