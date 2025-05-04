@@ -4,11 +4,12 @@
     overflow: hidden;
     box-sizing: border-box;
     display: flex;
-    align-items: center;
+    align-items: center; 
     justify-content: center;
     height: 100vh;
     position: relative;
-    background: var(--page-bg);
+    background: rgba(74, 144, 191, 0.2);
+    font-family: 'SF Pro', 'Blinker', 'Poppins', Arial, Helvetica, sans-serif;
 }
 
 .auth_left_blob {
@@ -27,28 +28,22 @@
 .form_component {
     width: 80%;
     height: 80%;
-    border-radius: 12px;
-    background: var(--page-bg-darker);
+    background: #000;
+    /* background: var(--biscay); */
     display: flex;
     align-items: center;
     justify-content: space-between;
     max-width: 1500px;
     max-height: 900px;
+    position: relative;
+    z-index: 99;
 }
 
 .form_carousel_container {
     width: 50%;
     height: 100%;
-    /* border: 1px solid white; */
     display: flex;
     position: relative;
-}
-
-.form_carousel_overlay {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    background-color: rgba(0, 0, 0, 0.297);
 }
 
 .authForm_wrapper {
@@ -82,13 +77,43 @@
     text-decoration: underline;
 }
 
+.bg_illustration {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    border: 1px solid black;
+    z-index: 1;
+}
+
+.authIllustration {
+    position: absolute;
+}
+
+.authIllustration.one {
+    width: 150px;
+    height: max-content;
+    right: 40px;
+    bottom: -40px;
+}
+
+.authIllustration.two {
+    width: 130px;
+    height: max-content;
+    left: 15px;
+    top: 10px;
+    /* border: 1px solid black; */
+    /* transform: rotate(-45deg); */
+}
 
 
 
-@media (max-width: 769px) {
+
+@media (max-width: 1024px) {
     
 .form_component {
-    width: 90%;
+    width: 70%;
     height: max-content;
     padding-bottom: 3rem;
 }
@@ -100,7 +125,7 @@
 .authForm_wrapper {
     width: 100%;
     height: 100%;
-    padding: 1.5rem;
+    /* padding: 1.5rem; */
     padding-top: 1.5rem;
     gap: .6rem;
     align-items: center;
@@ -108,7 +133,7 @@
 
 
 .formTitle {
-    font-size: 7vw;
+    font-size: 32px;
 }
 
 }
