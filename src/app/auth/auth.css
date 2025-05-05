@@ -8,6 +8,7 @@
     justify-content: center;
     height: 100vh;
     position: relative;
+    /* background: #EDE6DA; */
     background: rgba(74, 144, 191, 0.2);
     font-family: 'SF Pro', 'Blinker', 'Poppins', Arial, Helvetica, sans-serif;
 }
@@ -28,8 +29,6 @@
 .form_component {
     width: 80%;
     height: 80%;
-    background: #000;
-    /* background: var(--biscay); */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -44,12 +43,38 @@
     height: 100%;
     display: flex;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.loginImg {
+    width: 80%;
+    height: max-content;
+}
+
+.loginCaption {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.loginCaption .dot {
+    font-size: 48px;
+}
+
+.loginCaption .noProblem {
+    color: var(--fog);
 }
 
 .authForm_wrapper {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     justify-content: flex-start;
     width: 45%;
     height: 100%;
@@ -57,6 +82,8 @@
     padding-top: 4rem;
     box-sizing: border-box;
     gap: .6rem;
+    background: #000;
+    border-radius: 14px;
 }
 
 .formTitle {
@@ -68,6 +95,10 @@
 .subTxt {
     color: rgb(186, 186, 186);
     font-size: 14px;
+}
+
+.subTxt.forgot {
+    margin-top: 1rem;
 }
 
 .subTxt  span {

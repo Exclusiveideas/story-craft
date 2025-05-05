@@ -2,10 +2,10 @@
 
 import { useState } from "react";
 import "./auth.css";
-import AuthFormCarousel from "@/components/authComponents/authFormCarousel";
 import LoginForm from "@/components/authComponents/authForms/login";
 import SignupForm from "@/components/authComponents/authForms/signupForm";
 import RecoverPassword from "@/components/authComponents/authForms/recoverPass";
+import Image from "next/image";
 
 const Auth = () => {
   const [activeForm, setActiveForm] = useState("login"); // login, signup, recover
@@ -14,7 +14,16 @@ const Auth = () => {
       <div className="auth_left_blob"></div>
       <div className="form_component">
         <div className="form_carousel_container">
-          <AuthFormCarousel />
+          <Image
+            src={`/images/craft.png`}
+            width={600}
+            height={600}
+            alt="login Image"
+            className="loginImg"
+          />
+          <div className="loginCaption">
+            <h3>Too Much Work? <span className="noProblem">No Problem</span></h3>
+          </div>
         </div>
         <div className="authForm_wrapper">
           {activeForm == "login" && (
@@ -51,29 +60,13 @@ const Auth = () => {
           {activeForm == "recover" && <RecoverPassword />}
           {/*  */}
           {activeForm == "login" && (
-            <p className="subTxt">
+            <p className="subTxt forgot">
               Forgot your password?{" "}
               <span onClick={() => setActiveForm("recover")}>recover it</span>
             </p>
           )}
         </div>
       </div>
-      {/* <div className="bg_illustration">
-        <Image
-          src={`/images/lion.png`}
-          width={300}
-          height={300}
-          alt="login Illustration"
-          className="authIllustration one"
-        />
-        <Image
-          src={`/images/abstract.png`}
-          width={300}
-          height={300}
-          alt="login Illustration"
-          className="authIllustration two"
-        />
-      </div> */}
     </div>
   );
 };
