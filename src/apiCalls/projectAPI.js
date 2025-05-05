@@ -33,3 +33,16 @@ export const fetchProject = async (projectID) => {
     };
   }
 };
+
+export const fetchUserProjects = async () => {
+    
+  try {
+    const response = await API.get(`/project/`);
+
+    return { projects: response.data };
+  } catch (err) {
+    return {
+      error: err?.response?.data?.error || err?.message || "Problem fetching projects - Try again.",
+    };
+  }
+};

@@ -1,18 +1,21 @@
 .dP_wrapper {
-    border: 1px solid rgb(148, 148, 148);
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     border-radius: 15px;
     box-sizing: border-box;
     overflow: hidden;
-    height: 300px;
+    min-height: 300px;
     cursor: pointer;
     max-width: 500px;
+    border: 2px solid #7bb7d1;
+    background: rgba(123, 183, 209, 0.1);
+    color: #3C424D;
 }
 
 .dp_imageWrapper {
     width: 100%;
-    height: 60%;
+    height: 188px;
     box-sizing: border-box;
     overflow: hidden;
     display: flex;
@@ -24,15 +27,16 @@
     width: 100%;
     object-fit: cover;
     height: max-content;
+    transform: scale(.85);
 }
 
 .dp_infoContainer {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    height: 40%;
-    padding: .5rem;
-    gap: .5rem;
+    justify-content: flex-start;
+    flex: 1;
+    padding: 1.2rem .6rem;
+    gap: 1rem;
 }
 
 .projectName {
@@ -43,15 +47,24 @@
 }
 
 .dp_description, .dp_tags {
-    font-size: 12px;
+    font-size: 8px;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    width: 100%;
+    box-sizing: border-box;
+    flex-wrap: wrap;
 }
 
-.dp_description span {
-    font-style: italic;
-    color: gray;
+.badge {
+    background-color: var(--fog-darker);
 }
 
-.dp_tags span {
-    font-style: italic;
-    color: gray;
+.badge:hover {
+    background-color: var(--fog);
+}
+
+.badge.tag {
+    background-color: white;
+    color: black;
 }

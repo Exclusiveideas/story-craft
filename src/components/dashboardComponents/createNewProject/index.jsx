@@ -42,7 +42,7 @@ export default function NewProjectDialog() {
         
         <DialogFooter>
           <Button variant="outline" onClick={closeProjectDialog}>Cancel</Button>
-          <Button onClick={handleSave} disabled={isLoading}>
+          <Button className="newProjectBtn" onClick={handleSave} disabled={isLoading}>
             {isLoading ? <CircularProgress color="white" size="17px" /> : "Create Project"}
           </Button>
         </DialogFooter>

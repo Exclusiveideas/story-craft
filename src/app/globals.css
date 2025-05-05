@@ -30,6 +30,7 @@
 
 
   --fog: #2873a5;
+  --fog-darker: #1e6493;
   --fog-light-bg: rgba(74, 144, 191, 0.1);
   --anakiwa: #6cc3e5;
   --anakiwa-light-bg: rgba(108, 195, 229, 0.1);
@@ -48,7 +49,7 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
-  font-family: 'Blinker', 'Poppins', 'SF Pro', Arial, Helvetica, sans-serif;
+  font-family: 'SF Pro', 'Blinker', 'Poppins', Arial, Helvetica, sans-serif;
   scroll-behavior: smooth;
 }
 

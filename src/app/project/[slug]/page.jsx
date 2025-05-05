@@ -11,6 +11,8 @@ import ProjectLoadingDialog from "@/components/projectPageComponents/projectDial
 import { useProcessStore } from "@/store/processStore";
 import { ProjectNavbar } from "@/components/projectNavbar";
 import ProjectView from "@/components/projectPageComponents/projectView";
+import useAuthStore from "@/store/authStore";
+import { useHydrationZustand } from "@codebayu/use-hydration-zustand";
 
 export default function Page() {
   const pathname = usePathname(); // Get the current URL path
@@ -26,6 +28,9 @@ export default function Page() {
   const { activeProject, openloadingDialog, closeloadingDialog, updateActiveProject, updateActiveProjectResearches } = useProjectPageStore();
   const { addProcess } = useProcessStore();
   const {createProjectResearchCaller, fetchProjectResearchCaller} = useResearchProcess(projectId);
+
+  const isHydrated = useHydrationZustand(useAuthStore);
+  const user = useAuthStore((state) => state.user);
 
   useEffect(() => {
     openloadingDialog()
@@ -101,6 +106,12 @@ export default function Page() {
     }
     
   };
+  
+  useEffect(() => {
+    if (isHydrated && !user) {
+      router.push("/auth");
+    }
+  }, [user, isHydrated]);
 
 
   return (

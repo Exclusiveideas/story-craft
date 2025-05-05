@@ -2,123 +2,22 @@
 
 import { AppSidebar } from "@/components/appSideBar";
 import "./dashboard.css";
-import { FolderX, PanelRightOpen } from "lucide-react";
+import { PanelRightOpen } from "lucide-react";
 import { useSidebar } from "@/components/ui/sidebar";
-import { useEffect, useState } from "react";
 import DashboardProject from "@/components/dashboardComponents/dashboardProject";
 import SpinnerLoader from "@/components/cssLoader";
 import NewProjectDialogue from "@/components/dashboardComponents/createNewProject";
 import useDialogStore from "@/store/useDialogStore";
+import { useDashboardData } from "@/hooks/useDashboardData";
+import Image from "next/image";
 
-const projects = [
-  {
-    title: "How to be a superhero in 12 seconds",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicingswwe ww wef wfw f w ewf",
-    style: "Listicle format",
-    tags: ["one", "two", "three", "mufu"],
-    uuid: "5b3f59b3-b437-492a-a9b8-6b25ff3f1034",
-  },
-  {
-    title: "How to be a superhero in 12 seconds",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicingswwe ww wef wfw f w ewf",
-    style: "Listicle format",
-    tags: ["one", "two", "three"],
-    uuid: "5df5d667-9530-46c9-abd8-0ae947106877",
-  },
-  {
-    title: "How to be a superhero in 12 seconds",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicingswwe ww wef wfw f w ewf",
-    style: "Listicle format",
-    tags: ["one", "two", "three"],
-    uuid: "5b3f59b3-b437-492a-a9b8-6b25ff3f1034",
-  },
-  {
-    title: "How to be a superhero in 12 seconds",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicingswwe ww wef wfw f w ewf",
-    style: "Listicle format",
-    tags: ["one", "two", "three"],
-    uuid: "5b3f59b3-b437-492a-a9b8-6b25ff3f1034",
-  },
-  {
-    title: "How to be a superhero in 12 seconds",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicingswwe ww wef wfw f w ewf",
-    style: "Listicle format",
-    tags: ["one", "two", "three"],
-    uuid: "5b3f59b3-b437-492a-a9b8-6b25ff3f1034",
-  },
-  {
-    title: "How to be a superhero in 12 seconds",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicingswwe ww wef wfw f w ewf",
-    style: "Listicle format",
-    tags: ["one", "two", "three"],
-    uuid: "5b3f59b3-b437-492a-a9b8-6b25ff3f1034",
-  },
-  {
-    title: "How to be a superhero in 12 seconds",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicingswwe ww wef wfw f w ewf",
-    style: "Listicle format",
-    tags: ["one", "two", "three"],
-    uuid: "5b3f59b3-b437-492a-a9b8-6b25ff3f1034",
-  },
-  {
-    title: "How to be a superhero in 12 seconds",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicingswwe ww wef wfw f w ewf",
-    style: "Listicle format",
-    tags: ["one", "two", "three"],
-    uuid: "5b3f59b3-b437-492a-a9b8-6b25ff3f1034",
-  },
-  {
-    title: "How to be a superhero in 12 seconds",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicingswwe ww wef wfw f w ewf",
-    style: "Listicle format",
-    tags: ["one", "two", "three"],
-    uuid: "5b3f59b3-b437-492a-a9b8-6b25ff3f1034",
-  },
-];
 
 const Dashboard = () => {
   const { toggleSidebar } = useSidebar();
-  const [searchData, setSearchData] = useState("");
-  const [filteredProjects, setFilteredProjects] = useState([]);
-  const [loading, setLoading] = useState(true);
-
-
   const { openDialog } = useDialogStore();
 
-  useEffect(() => {
-    // Simulate API call with timeout
-    setLoading(true);
-    setTimeout(() => {
-      setFilteredProjects(projects);
-      setLoading(false);
-    }, 1000); // Simulating a 1-second delay
-  }, []);
-
-  useEffect(() => {
-    if (!searchData.trim()) {
-      setFilteredProjects(projects);
-      return;
-    }
-
-    const filtered = projects.filter(
-      (project) =>
-        project.title.toLowerCase().includes(searchData.toLowerCase()) ||
-        project.tags.some((tag) =>
-          tag.toLowerCase().includes(searchData.toLowerCase())
-        )
-    );
-
-    setFilteredProjects(filtered);
-  }, [searchData]);
+  const { searchData, setSearchData, loading, filteredProjects } =
+    useDashboardData();
 
   return (
     <div className="dashboard_wrapper">
@@ -142,7 +41,9 @@ const Dashboard = () => {
         <div className="dashboard_content">
           <div className="contentHeader">
             <h1>All Projects</h1>
-            <div onClick={openDialog} className="createNewProjectBtn">Create New Project</div>
+            <div onClick={openDialog} className="createNewProjectBtn">
+              Create New Project
+            </div>
           </div>
           {loading ? (
             <div className="noProjectsWrapper">
@@ -158,8 +59,13 @@ const Dashboard = () => {
                 </div>
               ) : (
                 <div className="noProjectsWrapper">
-                  <FolderX />
-                  <p>No Projects</p>
+                  <Image
+                    src={`/images/empty-box.png`}
+                    width={400}
+                    height={400}
+                    alt="empty box"
+                    className="noProjectImg"
+                  />
                 </div>
               )}
             </>
