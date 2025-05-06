@@ -1,29 +1,37 @@
 "use client";
 
-import SignupForm from "../landingPageComponents/signUpForm";
+import Navbar from "@/components/navbar";
 import "./heroSection.css";
+import CTABtn from "@/components/ctaBtn";
+import { Gift } from "lucide-react";
 
 const HeroSection = () => {
-
-
   return (
     <div id="hero" className="heroWrapper">
-      <p className="herotagline">
-        Sign up for Early Access and get 100% Free Storyboards for 2 Project
-      </p>
-      <h2 className="heroWord">
-        Edit Your Videos Faster <span className="ampersand"> & </span>Better
-        With <br />
-        AI-Powered Suggestion
-      </h2>
-      <p className="herotagline">
-        Be equipped with industry and Niche Specific suggestions with
-        <b> AI-Powered Video Analysis</b>
-      </p>
-      <p className="herotagline">
-        Spend less time thinking and more time editing and earning, Sign Up Now!
-      </p>
-      <SignupForm />
+      <Navbar />
+      <div className="heroBodyWrapper left">
+        <div className="heroBody_subWrapper">
+          <h2 className="heroWord">
+            Plan Better Video Scripts, <span>5x Faster</span>
+          </h2>
+          <p className="herotagline">
+            Describe your video. We handle the structure, research, and flow -
+            visually mapped in minutes without the overwhelm.
+          </p>
+          <div className="fomoContainer">
+            <CTABtn />
+            <div className="fomo_wrapper">
+              <Gift className="gift" />
+              <p>
+                <span>Early access pricing</span> ends after 100 users — 18
+                spots remaining.
+              </p>
+            </div>
+          </div>
+          <div className="heroFomo_container"></div>
+        </div>
+        <div className="heroBody_subWrapper"></div>
+      </div>
     </div>
   );
 };

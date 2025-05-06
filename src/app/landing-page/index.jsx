@@ -1,9 +1,12 @@
 import './landingPage.css'
+import HeroSection from '@/components/landingPageComponents/herosection'
 
 const LandingPage = () => {
   return (
-    <div>LandingPage</div>
+    <div className="landingPage">
+      <HeroSection />
+    </div>
   )
 }
 
-export default LandingPage
+export default LandingPage 

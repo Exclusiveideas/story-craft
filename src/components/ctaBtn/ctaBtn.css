@@ -1,0 +1,31 @@
+.ctaBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .8rem 3.2rem;
+    background-color: var(--fog);
+    /* background-color: var(--cta-orange); */
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    gap: .4rem;
+    width: max-content;
+    transition: all 0.15s ease-in;
+
+    
+    box-shadow: -1px 1px 19px -4px rgba(51, 51, 51, 0.83);
+    -webkit-box-shadow: -1px 1px 19px -4px rgba(51, 51, 51, 0.83);
+    -moz-box-shadow: -1px 1px 19px -4px rgba(51, 51, 51, 0.83);
+}
+
+.ctaBtn:hover {
+    box-shadow: -1px 1px 19px -4px var(--fog-darker);
+    -webkit-box-shadow: -1px 1px 19px -4px var(--fog-darker);
+    -moz-box-shadow: -1px 1px 19px -4px var(--fog-darker);
+}
+
+.pen {
+    width: 22px;
+    height: 22px;
+}
